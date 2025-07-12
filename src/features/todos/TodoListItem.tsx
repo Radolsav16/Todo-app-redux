@@ -1,7 +1,9 @@
 import { ReactElement } from "react";
-import RemoveItemButton from "./RemoveItemButton";
-import InputCheckBox from "./InputCheckBox";
+
 import Todo from "../../types/Todo.type";
+import RemoveItemButton from "../../components/todo-list-items/RemoveItemButton";
+import InputCheckBox from "../../components/todo-list-items/InputCheckBox";
+
 
 const TodoListItem = ({todoText}:Todo):ReactElement =>{
     return(

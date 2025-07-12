@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react"
-import TodoListItem from "./todo-list-items/TodoListItem"
+import TodoListItem from "./TodoListItem"
+
 
 const ItemList:React.FC = (): ReactElement =>{
     return(
