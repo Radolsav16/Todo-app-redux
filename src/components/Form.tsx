@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
-import NeedText from "./form/NeedText";
-import AddButton from "./form/AddButton";
+import NeedText from "./form-items/NeedText";
+import AddButton from "./form-items/AddButton";
 
 const Form:React.FC = ():ReactElement =>{
     return(
