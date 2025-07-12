@@ -7,6 +7,7 @@ A modern Todo App built with **React** and **Redux Toolkit**, demonstrating best
 ## 🚀 Features
 
 - CRUD on  todos
+- TypeScript
 - Modular and scalable folder structure
 - State management using Redux Toolkit
 - Reusable components
