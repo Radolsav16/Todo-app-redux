@@ -1,0 +1,14 @@
+{
+  "todo1": {
+    "text": "Buy groceries",
+    "completed": false
+  },
+  "todo2": {
+    "text": "Finish TypeScript project",
+    "completed": true
+  },
+  "todo3": {
+    "text": "Walk the dog",
+    "completed": false
+  }
+}
