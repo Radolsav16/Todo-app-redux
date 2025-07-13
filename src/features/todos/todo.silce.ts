@@ -1,6 +1,6 @@
 import { createSlice,PayloadAction } from "@reduxjs/toolkit";
 import Todo from "./types";
-import { fetchTodos } from "./todosThunks";
+import { deleteTodo, fetchTodos } from "./todosThunks";
 
 
 
@@ -36,6 +36,15 @@ export const todosSlice = createSlice({
             .addCase(fetchTodos.fulfilled,(state,action: PayloadAction<{[key:string]:Todo}>)=>{
                 state.status = 'succeeded';
                 state.items = action.payload
+            })
+            .addCase(deleteTodo.rejected,(state,action) =>{
+                state.status = 'failed'
+                state.error = action.error.message ?? 'Failing delete todo'
+            })
+
+            .addCase(deleteTodo.fulfilled,(state,action)=>{
+                state.status = 'succeeded'
+                delete state.items[action.payload];
             })
     }
 }) 
