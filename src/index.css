@@ -1,3 +1,7 @@
+.body {
+  height: 100%; /* 100% of the viewport height */
+}
+
 .remove-btn{
     cursor: pointer;
 }
