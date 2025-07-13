@@ -19,4 +19,4 @@ A modern Todo App built with **React** and **Redux Toolkit**, demonstrating best
 
 # My Todo App
 
-![Todo App](./todo-app)
+![Todo App](./public/todo-project.png)
