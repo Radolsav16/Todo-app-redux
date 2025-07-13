@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { useAppDispatch } from "../../app/hooks";
 import { addTodo } from "../../features/todos/todosThunks";
 import Todo from "../../features/todos/types";
-import { v4 as uuidv4 } from "uuid";
+
 
 type Props = {
   setText:(val:string) => void
@@ -13,7 +13,6 @@ const AddButton:React.FC<Props> = ({text,setText}):ReactElement =>{
   const dispatch = useAppDispatch();
 
   const todo:Todo = {
-    id:uuidv4(),
     text,
     completed:false
   }

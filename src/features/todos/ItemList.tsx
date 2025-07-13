@@ -2,13 +2,20 @@ import React, { ReactElement, useEffect } from "react";
 import TodoListItem from "./TodoListItem";
 import { useAppDispatch} from "../../app/hooks";
 import { fetchTodos } from "./todosThunks";
-import { selectSortedTodos,  selectTodosState } from "../../app/selectors/todosSelector";
+import { selectTodosState } from "../../app/selectors/todosSelector";
 import { useSelector } from "react-redux";
+import Todo from "./types";
+
+
+
 
 const ItemList: React.FC = (): ReactElement => {
   const dispatch = useAppDispatch();
-  const sortedTodos = useSelector(selectSortedTodos);
-  const { status, error } = useSelector(selectTodosState);
+  const { status, error,items } = useSelector(selectTodosState);
+
+
+
+  const todos: [string, Todo][] = Object.entries(items);
 
 
   useEffect(() => {
@@ -18,16 +25,16 @@ const ItemList: React.FC = (): ReactElement => {
   if (status === "loading") return <p>Loading...</p>;
   if (status === "failed") return <p>{error}</p>;
 
-  
+
 
   return (
     <ul className="list-group mb-0">
-      {sortedTodos.map((todo) => (
+      {todos.map(([id,obj]) => (
         <TodoListItem
-          key={todo.id}
-          id={todo.id}
-          text={todo.text}
-          completed={todo.completed}
+          key={id}
+          id={id}
+          text={obj.text}
+          completed={obj.completed}
         />
       ))}
     </ul>

@@ -1,12 +1,16 @@
 import React, { ReactElement } from "react";
-import Todo from "../../features/todos/types";
 
+type Prop = {
+    id:string,
+    text:string,
+    completed:boolean
+}
 
 type onChangeEvent = React.ChangeEventHandler<HTMLInputElement>
 
 
 
-const InputCheckBox = ({text,completed}:Todo):ReactElement => {
+const InputCheckBox = ({text,completed}:Prop):ReactElement => {
   const onChange:onChangeEvent = () =>{
     
   }
