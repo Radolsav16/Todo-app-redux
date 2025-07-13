@@ -1,27 +1,12 @@
-import React, { ReactElement, useEffect } from "react";
+import React, { ReactElement} from "react";
 import TodoListItem from "./TodoListItem";
-import { useAppDispatch} from "../../app/hooks";
-import { fetchTodos } from "./todosThunks";
-import { selectTodosState } from "../../app/selectors/todosSelector";
-import { useSelector } from "react-redux";
-import Todo from "./types";
+import { useItemList } from "./hooks/useItemList";
 
 
 
 
 const ItemList: React.FC = (): ReactElement => {
-  const dispatch = useAppDispatch();
-  const { status, error,items } = useSelector(selectTodosState);
-
-
-
-  const todos: [string, Todo][] = Object.entries(items);
-
-
-  useEffect(() => {
-    dispatch(fetchTodos());
-  }, [dispatch]);
-
+    const {todos,status,error} = useItemList()
   if (status === "loading") return <p>Loading...</p>;
   if (status === "failed") return <p>{error}</p>;
 

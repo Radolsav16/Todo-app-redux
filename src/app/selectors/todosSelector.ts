@@ -1,6 +1,6 @@
 import { createSelector } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-import Todo from "../../features/todos/types";
+import { Todo } from "../../features/todos/types";
 
 export const selectTodosState = (state:RootState)=>state.todos;
 

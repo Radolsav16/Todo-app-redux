@@ -1,19 +1,13 @@
 import React, { ReactElement } from "react";
 import { useAppDispatch } from "../../app/hooks";
 import { makeTodoCheck } from "../../features/todos/todosThunks";
-
-type Prop = {
-    id:string,
-    text:string,
-    isCompleted:boolean,
-    setCompleted:(val:boolean) => void;
-}
+import { CheckProp } from "../../features/todos/types";
 
 type onChangeEvent = React.ChangeEventHandler<HTMLInputElement>
 
 
 
-const InputCheckBox = ({text,id,isCompleted,setCompleted}:Prop):ReactElement => {
+const InputCheckBox = ({text,id,isCompleted,setCompleted}:CheckProp):ReactElement => {
   const dispatch = useAppDispatch()
 
   const onChange:onChangeEvent = () =>{

@@ -1,14 +1,7 @@
 import { ReactElement, useState } from "react";
 import RemoveItemButton from "../../components/todo-list-items/RemoveItemButton";
 import InputCheckBox from "../../components/todo-list-items/InputCheckBox";
-
-
-type Prop = {
-    id:string,
-    text:string,
-    completed:boolean
-}
-
+import { Prop } from "./types";
 
 const TodoListItem = ({id,text,completed}:Prop):ReactElement =>{
     const [isCompleted,setCompleted] = useState(completed);
