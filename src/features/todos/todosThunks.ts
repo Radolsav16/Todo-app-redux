@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import Todo from "./types";
+import { Todo } from "./types";
 
 const baseUrl =
   "https://todo-app-redux-53d66-default-rtdb.europe-west1.firebasedatabase.app/todos.json";

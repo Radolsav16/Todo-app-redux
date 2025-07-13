@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { useAppDispatch } from "../../app/hooks";
 import { addTodo } from "../../features/todos/todosThunks";
-import Todo from "../../features/todos/types";
+import { Todo } from "../../features/todos/types";
 
 
 type Props = {
