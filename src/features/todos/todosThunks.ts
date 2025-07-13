@@ -28,3 +28,15 @@ export const deleteTodo = createAsyncThunk<string, string>(
     }
 );
 
+
+export const addTodo = createAsyncThunk<Todo,Todo>(
+    'todos/addTodo',
+    async(todo,thunkAPI)=>{
+        try{
+            await axios.post(baseUrl,todo)
+            return todo;
+        }catch(error:any){
+               return thunkAPI.rejectWithValue(error.message || 'Failed to delete todo');   
+        }
+    })
+
