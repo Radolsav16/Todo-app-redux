@@ -2,6 +2,8 @@
 
 # 📝 Redux Toolkit Todo App
 
+[Todo App](https://todo-app-rtd.netlify.app/)
+
 A modern Todo App built with **React** and **Redux Toolkit**, demonstrating best practices in architecture, state management, and component design.
 
 ## 🚀 Features
